@@ -1,6 +1,5 @@
 package auta.interfaces;
 
-import auta.enums.Direction;
 
 public interface Moveable {
 

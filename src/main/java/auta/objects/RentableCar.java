@@ -22,12 +22,12 @@ public class RentableCar extends Car implements Rentable {
 
     @Override
     public boolean isRent() {
-        return person == null;
+        return person != null;
     }
 
     @Override
     public String toString() {
-        return super.toString()+ "RentableCar{" +
+        return super.toString() + "RentableCar{" +
                 "person=" + person +
                 '}';
     }

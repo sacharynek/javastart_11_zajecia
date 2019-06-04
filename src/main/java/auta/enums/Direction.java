@@ -1,5 +1,5 @@
 package auta.enums;
 
 public enum Direction {
-    Straight, Backward, Left, Right
+    STRAIGHT, BACKWARD, LEFT, RIGHT
 }

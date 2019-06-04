@@ -1,5 +1,7 @@
 package auta.objects;
 
+import java.util.Objects;
+
 public class Person {
 
     private String firstName, lastName, id;
@@ -41,5 +43,24 @@ public class Person {
                 ", lastName='" + lastName + '\'' +
                 ", id='" + id + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Person person = (Person) o;
+        return firstName.equals(person.firstName) &&
+                lastName.equals(person.lastName) &&
+                id.equals(person.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(firstName, lastName, id);
     }
 }

@@ -7,7 +7,7 @@ public abstract class Vehicle implements Moveable {
 
     private String name;
     private int prodYear;
-    private Person lessor;
+
     private Direction direction;
 
     public Vehicle(String name, int prodYear) {
@@ -33,22 +33,22 @@ public abstract class Vehicle implements Moveable {
 
     @Override
     public void turnLeft() {
-        this.direction =  Direction.Left;
+        this.direction = Direction.LEFT;
     }
 
     @Override
     public void turnRight() {
-        this.direction = Direction.Right;
+        this.direction = Direction.RIGHT;
     }
 
     @Override
     public void goForward() {
-        this.direction = Direction.Straight;
+        this.direction = Direction.STRAIGHT;
     }
 
     @Override
     public void goBack() {
-        this.direction = Direction.Backward;
+        this.direction = Direction.BACKWARD;
     }
 
     @Override
@@ -56,7 +56,7 @@ public abstract class Vehicle implements Moveable {
         return "Vehicle{" +
                 "name='" + name + '\'' +
                 ", prodYear=" + prodYear +
-                ", lessor=" + lessor +
+
                 ", direction=" + direction +
                 '}';
     }
